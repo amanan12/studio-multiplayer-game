@@ -76,7 +76,7 @@ export default class RockPaperScissors extends Component {
             onClick={() => this.select("Rock")} />
           <RaisedButton label="Paper" primary={true}
             onClick={() => this.select("Paper")} />
-          <RaisedButton label="Rock" secondary={true}
+          <RaisedButton label="Scissors" secondary={true}
             onClick={() => this.select("Scissors")} />
         </div>
       </div>);

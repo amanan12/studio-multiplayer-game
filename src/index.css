@@ -3,3 +3,52 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.card{
+  border: solid 1px black;
+  width: 220px;
+  height: 320px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  padding: 20px;
+  overflow-wrap: break-word;
+  font-weight: bold;
+}
+
+.a{
+  left: 10px;
+  position: absolute;
+}
+
+.b{
+  left: 220px;
+  position: absolute;
+}
+
+.c{
+  left: 430px;
+  position: absolute;
+}
+
+.d{
+  left: 640px;
+  position: absolute;
+}
+
+.e{
+  left: 850px;
+  position: absolute;
+}
+
+.cardShow{
+  border: solid 1px black;
+  position: absolute;
+  margin-left: 300px;
+  height: 360px;
+  width: 760px;
+}
+
+

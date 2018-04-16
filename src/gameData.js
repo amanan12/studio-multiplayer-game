@@ -1,6 +1,7 @@
 import ChatRoom from './ChatRoom.js';
 import TicTacToe from './TicTacToe.js';
 import RockPaperScissors from './RockPaperScissors.js';
+import CardsAgainstHumanity from './CardsAgainstHumanity.js';
 
 const gameData = {
 
@@ -30,6 +31,15 @@ const gameData = {
     maxUsers: 2,
     component: RockPaperScissors,
   },
+  
+  cardsagainsthumanity: {
+    title: "Cards Against Humanity",
+    authors: "Ryan Wealleans, Abdul Manan",
+    description: "Card game",
+    minUsers: 1,
+    maxUsers: 8,
+    component: CardsAgainstHumanity,
+  }
 
 
 }
