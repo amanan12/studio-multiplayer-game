@@ -29,11 +29,48 @@ export default class CardsAgainstHumanity extends Component {
     }
     
     componentWillMount() {
+      // var id = this.props.match.params.id;
+      // var sessionDatabaseRef = firebase.database().ref("/session/" + id);
+      // console.log(sessionDatabaseRef);
+      // var sessionRef = firebase.database().ref(sessionDatabaseRef);
+      // console.log(sessionRef);
+      // var avatarRef = sessionRef.child("Pick");
+      // console.log(avatarRef.path.pieces);
+      // var currentUser = firebase.auth().currentUser.uid;
+      // var valu = (sessionDatabaseRef + "/" + currentUser);
+      
+      // avatarRef.on("value", function(snapshot) {
+      //   var a = snapshot.val();
+      //   console.log(a.Pick);
+      // });
+
+      
+      // console.log( "ID: " + currentUser );
+      // var a = this.state.label;
+      
+      
       var id = this.props.match.params.id;
-      var sessionDatabaseRef = firebase.database().ref("/session/" + id);
+      var sessionDatabaseRef = firebase.database().ref("/session/");
+      var sessionRef = firebase.database().ref(sessionDatabaseRef);
+      
       var currentUser = firebase.auth().currentUser.uid;
-      console.log("ID: " + currentUser);
-      var a = this.state.label;
+      
+      // console.log(id);
+      // console.log(currentUser);
+      
+      var avatarRef = sessionDatabaseRef.child(id);
+      
+      avatarRef.on("value", function(snapshot) {
+        var currentUser = firebase.auth().currentUser.uid;
+        var avatar = snapshot.val();
+        console.log(avatar.currentUser);
+      });
+
+      
+      // console.log(id);
+      
+      // console.log(sessionDatabaseRef);
+      
       
       const answers = ["a", "b", "c", "d", "e"];
       const som = Math.floor(Math.random() * answers.length);
@@ -53,6 +90,8 @@ export default class CardsAgainstHumanity extends Component {
       });
       
       console.log(b);
+      
+      this.avatarRef.update({ Pick: b });
       
       // var userChoice = {};
       // userChoice[firebase.auth().currentUser.uid] = b;
@@ -75,7 +114,7 @@ export default class CardsAgainstHumanity extends Component {
         <div>
           
           <div className="cardShow">
-            <h1>{this.state.label}</h1>
+            <Paper className="aB" style={style} zDepth={3}>{this.state.label}</Paper>
           </div> 
           
           <div className="card">{sentences[a] + ", " + (a+1)}</div>
