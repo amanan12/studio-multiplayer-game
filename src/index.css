@@ -51,4 +51,16 @@ body {
   width: 760px;
 }
 
+.ab{
+  position: absolute;
+}
+
+.ba{
+  position: absolute;
+  left: 220px;
+}
+
+.btn{
+  margin-left: 20px;
+}
 
