@@ -36,7 +36,7 @@ const gameData = {
     title: "Cards Against Humanity",
     authors: "Ryan Wealleans, Abdul Manan",
     description: "Card game",
-    minUsers: 1,
+    minUsers: 2,
     maxUsers: 8,
     component: CardsAgainstHumanity,
   }
